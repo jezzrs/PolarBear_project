@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save the Polar Bears | Project Norther Lights</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: radial-gradient(#ffffff 50%, #58bfea 100%);
+      }
+      h1 {
+        text-align: center;
+        letter-spacing: 10px;
+      }
+      h2 {
+        text-align: center;
+        letter-spacing: 3px;
+      }
+      .bigContainer {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .headerContainer {
+        position: relative;
+        max-width: 800px;
+        height: 350px;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/130/728/original/norther_lights.jpg?1719575180");
+        margin: 0 auto;
+        border-radius: 30px;
+      }
+      .title {
+        margin-bottom: 10px;
+        position: relative;
+        max-width: 800px;
+        color: #ffffff;
+        text-indent: 5%;
+        background: #000000;
+        text-shadow: 5px 5px 10px rgba(32, 0, 35, 0.4);
+        opacity: 0.8;
+        border: solid 3px transparent;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      .helpText {
+        text-align: center;
+        font-size: large;
+      }
+      .helpText .polarNeeds {
+        text-align: center;
+        font-size: larger;
+      }
+      .whoWeAre {
+        text-align: center;
+        line-height: 1.5;
+      }
+      .whoWeAre a {
+        text-decoration: none;
+      }
+      .whoWeAre a:hover {
+        cursor: pointer;
+      }
+      .whoWeAre a:visited {
+        text-shadow: -3px 0px 6px rgba(16, 100, 245, 0.4);
+        color: #1064f5;
+        text-decoration: none;
+      }
+      .howToHelp {
+        text-align: center;
+        letter-spacing: 3px;
+      }
+      .buttons {
+        position: static;
+      }
+      .adopt {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        border-color: #0584d2;
+        height: 30px;
+        width: 80px;
+        font-size: medium;
+        color: #ffffff;
+        background-color: #0584d2;
+        margin-bottom: 30px;
+        margin-right: 30px;
+      }
+      .adopt:hover {
+        background-color: #ffffff;
+        color: #0584d2;
+        cursor: pointer;
+        transition: all 300ms ease-out;
+      }
+      .donate {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        border-color: #0584d2;
+        height: 30px;
+        width: 80px;
+        font-size: medium;
+        color: #ffffff;
+        background-color: #0584d2;
+        margin-bottom: 30px;
+        margin-right: 30px;
+      }
+      .donate:hover {
+        background-color: #ffffff;
+        color: #0584d2;
+        cursor: pointer;
+        transition: all 300ms ease-out;
+      }
+      .volunteer {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        border-color: #0584d2;
+        height: 30px;
+        width: 80px;
+        font-size: medium;
+        color: #ffffff;
+        background-color: #0584d2;
+        margin-bottom: 30px;
+        margin-right: 30px;
+      }
+
+      .volunteer:hover {
+        background-color: #ffffff;
+        color: #0584d2;
+        cursor: pointer;
+        transition: all 300ms ease-out;
+      }
+      .bodyText {
+        background: #ffffff;
+        text-align: justify;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        border: 2px solid #2d78c9;
+        border-radius: 20px;
+        line-height: 1.5;
+      }
+      .bodyText a {
+        color: #2d78c9;
+      }
+      .bodyText a:hover {
+        cursor: pointer;
+      }
+      .imgPolarSwimming img {
+        width: 350px;
+        border-radius: 20px;
+      }
+      .imgPolarSwimming {
+        display: block;
+        float: right;
+        padding-top: 30px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+      }
+      .facts {
+        background: linear-gradient(to top, #2d78c9 0%, #58bfea 100%);
+        text-align: justify;
+        color: #ffffff;
+        padding-left: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 20px;
+        border: 10px solid #2d78c9;
+        border-radius: 20px;
+        border: 2px solid #e0e9f3;
+        border-radius: 20px;
+        margin-top: 30px;
+      }
+      .facts p {
+        font-size: 11pt;
+        font-weight: 100;
+        line-height: 1.8;
+      }
+      span {
+        font-weight: bolder;
+        text-shadow: -3px 0px 6px rgba(16, 100, 245, 0.4);
+        color: #1064f5;
+      }
+      .secondPolarBear img {
+        border-radius: 20px;
+      }
+      .secondPolarBear {
+        display: block;
+        float: left;
+        padding-top: 90px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+      }
+      .signature {
+        font-family: Garamond, serif;
+        color: #104680;
+        text-align: center;
+      }
+      #dancing {
+        text-align: center;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bigContainer">
+      <div class="headerContainer">
+        <div class="title">
+          <h1><strong>Project 'Northern Lights'</strong><br /></h1>
+
+          <hr />
+          <h2>You can help to save the future of polar bears</h2>
+        </div>
+      </div>
+
+      <div class="helpText">
+        <div class="polarNeeds">
+          <p>
+            <strong
+              >Polar bears need sea ice to hunt, mate, roam, and, sometimes,
+              den.
+            </strong>
+          </p>
+        </div>
+        <p>
+          <strong>Global climate warming </strong> caused by burning fossil
+          fuels for energy, is melting the sea ice polar bears depend on.
+        </p>
+      </div>
+      <div class="whoWeAre">
+        <h2>Who we are</h2>
+        <p>
+          <span>Project 'Northern Lights'</span> is made up of a small group of
+          passionate scientists and volunteers. Paired up with
+          <span>
+            <a href="https://polarbearsinternational.org/" target="_blank"
+              >Polar Bears International</a
+            ></span
+          >
+          we aim to help secure a future for polar bears across the Arctic.
+        </p>
+      </div>
+
+      <div class="howToHelp">
+        <h2>How can you help?</h2>
+        <div id="dancing">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/131/093/original/bear-dance.gif?1719831415"
+            alt="Cartoon of a polar bear dancing"
+          />
+        </div>
+
+        <div class="buttons">
+          <button class="adopt">Adopt</button>
+          <button class="donate">Donate</button>
+          <button class="volunteer">Volunteer</button>
+        </div>
+      </div>
+      <div class="imgPolarSwimming">
+        <img
+          style="align-self: baseline"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/130/686/original/71dpPgl753L.jpg?1719521449"
+          alt="Polar bear swimming"
+        />
+      </div>
+      <div class="bodyText">
+        <p>
+          The polar bear is a large bear native to the Arctic and nearby areas.
+          Its latin name, <em>Ursus maritimus</em>, means "sea bear" It is
+          closely related to the brown bear, and the two species can interbreed.
+          The polar bear is the largest extant species of bear and land
+          carnivore, with adult males weighing 300 to 800 kg.
+        </p>
+        <h3><em>Why are they in danger?</em></h3>
+        <p>
+          The loss of sea ice habitat from climate change is the biggest threat
+          to the survival of polar bears. Other concerns for polar bears include
+          lethal response to human-polar bear conflict, toxic pollution in the
+          environment, and direct impacts from industrial development, such as
+          disturbance of maternal dens or contact with an oil spill, and
+          potential overhunting of some subpopulations.
+        </p>
+        <h3><em>Why is it important to save the polar bears?</em></h3>
+        <p>
+          Polar bears are at the top of the food chain and have an important
+          role in the overall health of the marine environment. Over thousands
+          of years, polar bears have also been an important part of the cultures
+          and economies of Arctic peoples.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Polar_bear" target="_blank"
+          >Learn more about polar bears</a
+        >
+      </div>
+      <div class="secondPolarBear">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/130/725/original/images_%281%29.jpeg?1719574531"
+          alt="Polar bear looking to the front"
+          width="300px"
+        />
+      </div>
+      <div class="facts">
+        <h3><strong>Facts about Polar Bears ☃️</strong></h3>
+        <p>
+          ⭐Their running top speed is 40kph <br />
+          ⭐They can swim for days at a time reaching a speed of 9.6kmh <br />
+          ⭐They have 42 razor sharp teeth - With jagged back teeth and canines
+          larger than grizzly teeth<br />
+          ⭐Their paws are 30 cm wide; the size of a dinner plate!<br />
+          ⭐Their three eyelids help to protect the bear's eyes from the
+          elements <br />
+          ⭐They have four inches of fat under the skin to be warm in their cold
+          environment.<br />
+          ⭐ Male polar bears can weight as much as 800kg - the weight of almost
+          10 men! <br />
+          ⭐They are not really white, actually their skin is black and their
+          fur is transparent. <br />
+          ⭐They have a fun blue tongue <br />
+          ⭐There are as many as 19 subpopulations of polar bears around the
+          world.
+        </p>
+      </div>
+    </div>
+
+    <p class="signature">Coded by Jezz Ramirez</p>
+    <script>
+      function adopting() {
+        let name = prompt(
+          "Thank you for choosing to symbolically adopt a polar bear. Please tell us your what's your name?"
+        );
+        let mail = prompt(
+          "To which email should we send our adoption catalogue?"
+        );
+        let newsletter = prompt("Do you want to subscribe to our newsletter?");
+        if (newsletter === "Yes" || newsletter === "yes") {
+          alert(
+            "🎉🐻‍❄️Thank you for subscribing to our Newsletter, " + name + "!🐻‍❄️🎉"
+          );
+
+          let changeAdoption = document.querySelector(".howToHelp h2");
+          changeAdoption.innerHTML =
+            "Thank you for choosing to adopt a polar bear " +
+            name +
+            "!</br>" +
+            "We will send our catalogue in the next couple of days.";
+        } else {
+          alert(
+            "If you change your mind, you can subscribe to our Newsletter on the main site ☺️"
+          );
+          let changeAdoption = document.querySelector(".howToHelp h2");
+          changeAdoption.innerHTML =
+            "Thank you for choosing to adopt a polar bear " +
+            name +
+            "!</br>" +
+            "We will send our catalogue in the next couple of days.";
+        }
+        document.getElementById("dancing").style.display = "block";
+      }
+
+      let adoptButton = document.querySelector(".adopt");
+      adoptButton.addEventListener("click", adopting);
+
+      function donating() {
+        let name = prompt(
+          "We are grateful for your donation! Please tell us your what's your name?"
+        );
+        let mail = prompt(
+          "To which email should we send you the donation form?"
+        );
+        let newsletter = prompt(
+          "Additionally, do you want to subscribe to our newsletter?"
+        );
+        if (newsletter === "Yes" || newsletter === "yes") {
+          alert(
+            "🎉🐻‍❄️Thank you for subscribing to our Newsletter, " + name + "!🐻‍❄️🎉"
+          );
+
+          let changeAdoption = document.querySelector(".howToHelp h2");
+          changeAdoption.innerHTML =
+            "Thank you for choosing to donate to save the polar bears " +
+            name +
+            "!</br>" +
+            "Please check your email to fill the form.";
+        } else {
+          alert(
+            "If you change your mind, you can subscribe to our Newsletter on main site ☺️"
+          );
+          let changeAdoption = document.querySelector(".howToHelp h2");
+          changeAdoption.innerHTML =
+            "Thank you for choosing to donate to save the polar bears " +
+            name +
+            "!</br>" +
+            "Please check your email to fill the form.";
+        }
+        document.getElementById("dancing").style.display = "block";
+      }
+
+      let donateButton = document.querySelector(".donate");
+      donateButton.addEventListener("click", donating);
+
+      function volunteering() {
+        let name = prompt(
+          "We are grateful for your interest on volunteering! Please tell us your what's your name?"
+        );
+        let mail = prompt(
+          "To which email should we send you the voulnteering calendar?"
+        );
+        let newsletter = prompt("Do you want to subscribe to our newsletter?");
+        if (newsletter === "Yes" || newsletter === "yes") {
+          alert(
+            "🎉🐻‍❄️Thank you for subscribing to our Newsletter, " + name + "!🐻‍❄️🎉"
+          );
+
+          let changeAdoption = document.querySelector(".howToHelp h2");
+          changeAdoption.innerHTML =
+            "Thank you for choosing to volunteer " +
+            name +
+            "!</br>" +
+            "Please check your email to review the calendar and sign up to the available activities.";
+        } else {
+          alert(
+            "If you change your mind, you can subscribe to our Newsletter on main site ☺️"
+          );
+          let changeAdoption = document.querySelector(".howToHelp h2");
+          changeAdoption.innerHTML =
+            "Thank you for choosing to volunteer " +
+            name +
+            "!</br>" +
+            "Please check your email to review the calendar and sign up to the available activities.";
+        }
+        document.getElementById("dancing").style.display = "block";
+      }
+
+      let volunteerButton = document.querySelector(".volunteer");
+      volunteerButton.addEventListener("click", volunteering);
+    </script>
+  </body>
+</html>
